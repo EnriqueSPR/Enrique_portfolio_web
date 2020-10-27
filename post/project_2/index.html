@@ -37,7 +37,7 @@
 <meta itemprop="description" content="Trained a model that can predict bicycle usage at a given day">
 <meta itemprop="datePublished" content="2020-10-01T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-10-01T00:00:00+00:00" />
-<meta itemprop="wordCount" content="639">
+<meta itemprop="wordCount" content="665">
 
 
 
@@ -197,6 +197,7 @@
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="description">Description:</h3>
 <p>I will be using a dataset containing information from a bicycle rental company called capital bikeshare located in Washington D.C founded in 2010.
 The aim is to use the <a href="https://www.capitalbikeshare.com/system-data">data from the past 10 years</a> (2010-2020) to develop a model that can predict bicycle usage (Number of trips and total time ride usage) at a given day.</p>
+<p>🚲🚲☔🌞🕒</p>
 <h3 id="code-and-resources-used">Code and Resources Used:</h3>
 <p><strong>Python Version</strong>: 3.7</p>
 <p><strong>Packages</strong>: pandas, numpy, datetime, os, sklearn, matplotlib, seaborn, plotly.express, pickle and json.</p>
@@ -217,7 +218,7 @@ and <a href="https://docs.opendata.aws/noaa-ghcn-pds/readme.html">US federal hol
 For this cross-validation was performed and neg_mean_squared_error was used as metric of model performance.</p>
 </li>
 <li>
-<p>Fine <strong>tuned</strong> the most promissing models by using GridSearchCV.</p>
+<p>Fine <strong>tuned</strong> the most promissing models by using GridSearchCV. Two models, <strong>GradientBoostRegressor and ExtraTreesRegressor</strong>, were trained to predict the total bike usage and number of trips respectively. Both models achieved a <strong>score of 0.90</strong>.</p>
 </li>
 <li>
 <p>Created a <strong>pickle</strong> file for the machine learning model.</p>

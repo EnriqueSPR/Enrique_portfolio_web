@@ -31,12 +31,12 @@
 <meta property="og:description" content="A computational drug discovery project, in which bioinformatic and machine learning tools are used to identify possible molecular targets and drug chemical features to treat prostate cancer" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://enriquespr.github.io/Enrique_portfolio_web/post/project_1/" />
-<meta property="article:published_time" content="2020-11-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-11-01T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-11-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-12T00:00:00+00:00" />
 <meta itemprop="name" content="Project 1: Drug Discovery using Machine Learning">
 <meta itemprop="description" content="A computational drug discovery project, in which bioinformatic and machine learning tools are used to identify possible molecular targets and drug chemical features to treat prostate cancer">
-<meta itemprop="datePublished" content="2020-11-01T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-11-01T00:00:00+00:00" />
+<meta itemprop="datePublished" content="2020-11-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-11-12T00:00:00+00:00" />
 <meta itemprop="wordCount" content="851">
 
 
@@ -189,26 +189,26 @@
       <h1 class="f1 athelas mt3 mb1">Project 1: Drug Discovery using Machine Learning</h1>
       
       
-      <time class="f6 mv4 dib tracked" datetime="2020-11-01T00:00:00Z">November 1, 2020</time>
+      <time class="f6 mv4 dib tracked" datetime="2020-11-12T00:00:00Z">November 12, 2020</time>
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h2 id="description">Description:</h2>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h3 id="description">Description:</h3>
 <p>The goal of this project is to use data from the ChEMBL Database to train a model that can predict the activity of a potential drug based on its chemical properties.
 This can be used to study the <strong>chemical features</strong> that are critical in the drug effectiveness, and to study best <strong>molecular targets</strong> to act upon the specific disease.</p>
 <p>In this project I will focus on studying possible drugs targeting proteins with a role in <strong>prostate cancer</strong> development 🧫🔬⚙.</p>
 <p><em>Note: November and the movember movement inspired me to do this project.
 This movement that try to raise awareness of men&rsquo;s health issues, such as prostate cancer during the month of November. <a href="https://en.wikipedia.org/wiki/Movember">Read more about movember here</a>.</em></p>
-<h2 id="code-and-resources-used">Code and Resources Used:</h2>
+<h3 id="code-and-resources-used">Code and Resources Used:</h3>
 <p><a href="https://nbviewer.jupyter.org/github/EnriqueSPR/drug_discovery_project/blob/main/drugs_discovery.ipynb"><strong>See full project code here.</strong></a></p>
 <p><strong>Python Version</strong>: 3.7</p>
 <p><strong>Packages</strong>: pandas, numpy, chembl_webresource_client, scipy, os, glob, datetime, rdkit, sklearn, matplotlib, seaborn and plotly.</p>
-<h1 id="1-downloading-bioactivity-data-from-cheml">1. Downloading Bioactivity Data from ChEML</h1>
+<h2 id="1-downloading-bioactivity-data-from-cheml">1. Downloading Bioactivity Data from ChEML</h2>
 <p><a href="https://www.ebi.ac.uk/chembl/"><em>ChEMBL Database</em></a> is a database that contains curated bioactivity data of more than 2 million compounds.
 It is compiled from more than 76,000 documents, 1.2 million assays and the data spans 13,000 targets and 1,800 cells and 33,000 indications.</p>
 <p>Here I retrieved bioactivity data <strong>as IC$_{50}$</strong> for compounds against all human prostate <strong>single protein</strong> or <strong>protein complex</strong> targets.</p>
-<h1 id="2-data-cleaning-and-preprocessing">2. Data Cleaning and Preprocessing:</h1>
+<h2 id="2-data-cleaning-and-preprocessing">2. Data Cleaning and Preprocessing:</h2>
 <ul>
 <li><strong>drop nan</strong> values</li>
 <li><strong>feature engineering</strong> to create a bioactivity_class feature (active, intermediate, innactive)</li>
@@ -219,7 +219,7 @@ It is compiled from more than 76,000 documents, 1.2 million assays and the data 
     <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/negative_log_transformation.png"/> 
 </figure>
 
-<h1 id="3-exploratory-data-analysis">3. Exploratory Data Analysis:</h1>
+<h2 id="3-exploratory-data-analysis">3. Exploratory Data Analysis:</h2>
 <p><strong>Chemical Space Analysis using the Lipinski descriptors</strong></p>
 <ul>
 <li>Frequency distribution of the active and innactive bioactivity classes:</li>
@@ -250,7 +250,7 @@ i.e: Molecular Weight (MW)</li>
     <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/MW_vs_activity.png"/> 
 </figure>
 
-<h1 id="4-dataset-preparation">4. Dataset Preparation:</h1>
+<h2 id="4-dataset-preparation">4. Dataset Preparation:</h2>
 <ul>
 <li>
 <p>Using the <strong>Padel- Descriptor Software</strong> developed by the authors of <a href="http://onlinelibrary.wiley.com/doi/10.1002/jcc.21707/abstract">this paper</a>, we calculated the fingerprint descriptors for all the 3375 molecules of our dataset.</p>
@@ -262,7 +262,7 @@ i.e: Molecular Weight (MW)</li>
 <p>The Pubchem features basically construct a <strong>molecular fingerprint</strong> of each molecule in the data set. Based on this data, the model will be able to predict the level of activity of a drug based on its finger print.</p>
 </li>
 </ul>
-<h1 id="5-model-building">5. Model Building:</h1>
+<h2 id="5-model-building">5. Model Building:</h2>
 <ul>
 <li>Create the model dataframe, remove the PubChem features with low variance and split the data <strong>(80/20 train/test ratio)</strong></li>
 <li>Assess model performance: Different Regression algorithms were tested, and two best performing algos were (SVR and RFR) were selected for further tunning.
@@ -294,7 +294,7 @@ SVR and RFR were fined tunned using GridSearchCV. RFR perfrom the best with the 
     <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/Feature_importance_drugs.png"/> 
 </figure>
 
-<h1 id="6-conclussions">6. Conclussions:</h1>
+<h2 id="6-conclussions">6. Conclussions:</h2>
 <p><strong>6.1 PubChem features.</strong></p>
 <p>We observe that, based on our model, some of the <strong>PubChem features</strong> that seem to be <strong>most important</strong> in determining the activity of a drug are: 143, 18, 133, 171, 176 and 48.</p>
 <p>It would be interesting to investigate this further and try to associate this with the activity of the drup, which could sed some ligth into possible modes of action, and development of more effective drugs.</p>

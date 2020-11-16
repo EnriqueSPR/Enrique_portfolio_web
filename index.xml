@@ -6,11 +6,11 @@
     <description>Recent content in My Data Science Porfolio on Enrique Alcalde</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://enriquespr.github.io/Enrique_portfolio_web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://enriquespr.github.io/Enrique_portfolio_web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Project 1: Drug Discovery using Machine Learning</title>
       <link>https://enriquespr.github.io/Enrique_portfolio_web/post/project_1/</link>
-      <pubDate>Thu, 12 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 15 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://enriquespr.github.io/Enrique_portfolio_web/post/project_1/</guid>
       <description>Description: The goal of this project is to use data from the ChEMBL Database to train a model that can predict the activity of a potential drug based on its chemical properties. This can be used to study the chemical features that are critical in the drug effectiveness, and to study best molecular targets to act upon the specific disease.
@@ -23,7 +23,7 @@ In this project I will focus on studying possible drugs targeting proteins with 
       <pubDate>Tue, 03 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://enriquespr.github.io/Enrique_portfolio_web/post/project_2/</guid>
-      <description>Description: In this image classification project, I trained a CNN model capable of classifying 5 types of flowers with a 90% accuracy by using transfer learning and data augmentation. 🌼🌷🌻❓
+      <description>Description: In this image classification project, I trained a CNN model capable of classifying 5 types of flowers with a 98% accuracy by using transfer learning and data augmentation. 🌼🌷🌻❓
 See full code here.
   Code and Resources Used Python Version: 3.7
 Packages: pandas, numpy, random, os, cv2, pathlib, PIL, sklearn, matplotlib, seaborn, tensorflow (2.3.1) and keras (2.4.0).

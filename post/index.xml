@@ -8,23 +8,23 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://enriquespr.github.io/Enrique_portfolio_web/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Project 1: Gene Expression Analyses in Arabidopsis Using Machine Learning</title>
+      <title>Project 1: Mushroom Classifier using Transfer Learning (Ongoing)</title>
       <link>https://enriquespr.github.io/Enrique_portfolio_web/post/project_1/</link>
-      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://enriquespr.github.io/Enrique_portfolio_web/post/project_1/</guid>
-      <description>Framing the problem:   The unequal utilization of synonymous codons (CUB) affects numerous cellular processes i.e. translation rates, protein folding and mRNA degradation [Ref].
-  The use of synonymous codons in the gene coding regions are not random, and CUB is an essential feature of most genomes, which has been reported to have an strong impact on the transcription levels of genes [Ref] 🔬📚🔠.
-  Since codons within a synonymous codon group are translated at different rates, many computational translation models rely on analyzing synonymous codons.</description>
+      <description>Introduction: Mushrooms represent an important food source and they are used extensively in cooking 🍄👨🏼‍🍳, in many cuisines (notably Chinese, Korean, European, and Japanese). Furthermore, many people enjoy mushroom collection as a outdoor activity. However, this activity, entails some health risk, since some species that are poisoness look similar to edible specimens. In the example below I present such case of similarity between a delicious and edible mushroom Macrolepiota mastoidea and a Amanita phaloides which ingestion can lead to death 💀.</description>
     </item>
     
     <item>
-      <title>Project 2: Mushroom Classifier using Transfer Learning</title>
+      <title>Project 2: Gene Expression Analyses in Arabidopsis Using Machine Learning</title>
       <link>https://enriquespr.github.io/Enrique_portfolio_web/post/project_2/</link>
-      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 15 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://enriquespr.github.io/Enrique_portfolio_web/post/project_2/</guid>
-      <description>Introduction: Mushrooms represent an important food source and they are used extensively in cooking 🍄👨🏼‍🍳, in many cuisines (notably Chinese, Korean, European, and Japanese). Furthermore, many people enjoy mushroom collection as a outdoor activity. However, this activity, entails some health risk, since some species that are poisoness look similar to edible specimens. In the example below I present such case of similarity between a delicious and edible mushroom Macrolepiota mastoidea and a Amanita phaloides which ingestion can lead to death 💀.</description>
+      <description>Framing the problem:   The unequal utilization of synonymous codons (CUB) affects numerous cellular processes i.e. translation rates, protein folding and mRNA degradation [Ref].
+  The use of synonymous codons in the gene coding regions are not random, and CUB is an essential feature of most genomes, which has been reported to have an strong impact on the transcription levels of genes [Ref] 🔬📚🔠.
+  Since codons within a synonymous codon group are translated at different rates, many computational translation models rely on analyzing synonymous codons.</description>
     </item>
     
     <item>

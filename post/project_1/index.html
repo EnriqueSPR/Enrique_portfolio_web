@@ -37,7 +37,7 @@
 <meta itemprop="description" content="The goal in this project is to train a CNN to classify pictures of mushrooms from around 1000 different species">
 <meta itemprop="datePublished" content="2021-01-30T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-01-30T00:00:00+00:00" />
-<meta itemprop="wordCount" content="730">
+<meta itemprop="wordCount" content="1242">
 
 
 
@@ -206,10 +206,10 @@
 <p><a href="https://nbviewer.jupyter.org/github/EnriqueSPR/mushroom_classifier/blob/main/mushroom_CNN.ipynb"><strong>See full project code here.</strong></a></p>
 <p><a href="https://github.com/EnriqueSPR/mushroom_classifier">Link to GitHub Repository</a></p>
 <p><strong>Python Version</strong>: 3.7</p>
-<p><strong>Packages</strong>: pandas, numpy, csv, bing_image_downloader, simple_image_download, pathlib, sys, re, datetime, os, time, glob, sklearn, matplotlib, seaborn, splitfolders, keras (2.3.1) and tensorflow (2.4.0).</p>
+<p><strong>Packages</strong>: pandas, numpy, csv, bing_image_downloader, simple_image_download, pathlib, sys, re, datetime, os, time, glob, shutil, sklearn, matplotlib, seaborn, splitfolders, keras (2.3.1) and tensorflow (2.4.0).</p>
 <h2 id="1-scrape-mushroom-information-and-generate-the-picture-dataset">1. Scrape mushroom information and generate the picture dataset</h2>
 <ul>
-<li><strong>1.1 Scrape the scientific names</strong>: I obtained a total of 2000 mushroom species. Next I removed the &ldquo;var.&rdquo; species and some duplicates. This yielded a total of <strong>1911 total mushrooms.</strong></li>
+<li><strong>1.1</strong> Get all the scientific names: I obtained a total of 2000 mushroom species. Next I removed the &ldquo;var.&rdquo; species and some duplicates. This yielded a total of <strong>1911 total mushrooms.</strong></li>
 </ul>
 <blockquote>
 <p>From these species I selected the most popular ones.</p>
@@ -221,10 +221,10 @@
 <p>A second function <code>parse_value_syntax</code> was used to parse the value into a float.</p>
 </blockquote>
 <blockquote>
-<p>Using the hits in google I filtered those species with more than <strong>20.000 hits</strong> resulting in a total of <strong>933 mushroom species</strong>.</p>
+<p>Using the hits in google I filtered those species with more than <strong>20.000 hits</strong> resulting in a total of <strong>1071 mushroom species</strong>.</p>
 </blockquote>
 <ul>
-<li><strong>1.2 Use the scientific names to scrape pictures</strong>.</li>
+<li><strong>1.2</strong> Use the scientific names to scrape pictures.</li>
 </ul>
 <blockquote>
 <p>Google pictures were scraped using the <code>simple_image_download</code> library.</p>
@@ -232,6 +232,7 @@
 <blockquote>
 <p>Bing pictures were scraped using the <code>bing_image_downloader</code> library..</p>
 </blockquote>
+<hr>
 <h2 id="2-prepare-the-picture-dataset">2. Prepare the picture dataset</h2>
 <ul>
 <li>
@@ -276,12 +277,18 @@
 </li>
 </ul>
 <h2 id="3-select-cnn-models-for-transfer-learning">3. Select CNN models for transfer learning</h2>
-<p>Several models were selected for transfer learning. See this <a href="https://arxiv.org/abs/1810.00736">paper</a> for model performance comparission.</p>
+<p>I selected Xception for transfer learning, a model with reduced complexity which gives good results on the <strong>ImageNet</strong> dataset. See this <a href="https://arxiv.org/abs/1810.00736">paper</a> for model performance comparission.</p>
 <figure>
     <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/image_classification_models.png"/> 
 </figure>
 
-<h2 id="4-create-imagedatagenerators-and-train-the-cnn-models-xception-and-inception_resnet_v2">4. Create ImageDataGenerators and train the CNN model(s) Xception and Inception_Resnet_V2</h2>
+<p>Xception Architecture used:</p>
+<figure>
+    <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/Xception_structure.png"/> 
+</figure>
+
+<hr>
+<h2 id="4-create-imagedatagenerators-and-train-the-cnn-models">4. Create ImageDataGenerators and train the CNN model(s).</h2>
 <ul>
 <li><strong>4.1 Data Augmentation</strong>: To expand the training dataset in order to improve the performance and ability of the model to generalize.</li>
 </ul>
@@ -291,7 +298,7 @@
 </figure>
 
 <ul>
-<li><strong>4.2 Xception(2016) Model Training - Trainable params: 27,946,080. Picture_size used=299x299</strong></li>
+<li><strong>4.2 Xception(2016) Model Training - Trainable params: 27,946,080. Picture size=299x299 (Trained on pictures of 823 mushroom species total)</strong></li>
 </ul>
 <figure>
     <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/Xception_Training.png"/> 
@@ -323,14 +330,53 @@
 * Top 4 Prediction: With  1.5% probability is a picture of Lactarius.
 * Top 5 Prediction: With  1.0% probability is a picture of Lactarius sanguifluus.
 </code></pre>
-<p>Next, I will improve the picture dataset and train two more models containing more trainable parameters (Ongoing&hellip;▶).</p>
+<p>Next, I increased the number of mushroom species adn I trained the Xception model again using a <strong>larger picture size (600x600)</strong>.</p>
+<p><em>Note 1: After adding more mushroom species the accuracy of the model is expected to decrease, in particular, due to the large amount of species within the same mushroom Genus such Agaricus (16 species), Amanita (36 species), Boletus (23), Lactarius (38), Russula (40) since mushrooms with the same genus share many morphological features</em></p>
+<p><em>Note 2: I tried training EfficientNetB7(2020) but it took too long to train.</em></p>
 <ul>
-<li>
-<p><strong>4.4 InceptionResNetV2(2016) Model Training - Trainable params: 60,356,494. Picture_size used=600x600</strong></p>
-</li>
-<li>
-<p><strong>4.5 InceptionResNetV2 Performance Evaluation</strong></p>
-</li>
+<li><strong>4.4 my Xception model version 2 (2016) Model Training - Trainable params: 39,502,029. Picture_size=600x600 (Trained on pictures of 933 mushroom species total)</strong></li>
+</ul>
+<p>The hyperparameter batch_size is important as it largely affects the generalization and convergence speed of the model. Large batch sizes may cause bad generalization, but will converge faster (<a href="https://towardsdatascience.com/how-to-break-gpu-memory-boundaries-even-with-large-batch-sizes-7a9c27a400ce">See this blog for more info</a>). Here, a batch_size of 12 was chosen, partly due to GPU memory limitations.</p>
+<p>Regarding the optimizer, I employed Adam first and switched to sgd at the end of the training try squeezing the last bit of accuracy. <a href="https://mlfromscratch.com/optimizers-explained/#/">Read more this blog</a> to understand better how to pick the right optimizer.</p>
+<ul>
+<li><strong>4.5 Xception model version 2 Performance Evaluation</strong></li>
+</ul>
+<p>Final model -&gt; <strong>accuracy: 48.0%</strong>, loss:  2.07</p>
+<figure>
+    <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/galerina_clavata_challenge.jpeg"/> 
+</figure>
+
+<pre><code>* Top 1 Prediction: With 71.8% probability is a picture of Galerina clavata.
+* Top 2 Prediction: With  8.2% probability is a picture of Hygrocybe laeta.
+* Top 3 Prediction: With  3.9% probability is a picture of Entoloma incanum.
+* Top 4 Prediction: With  3.1% probability is a picture of Rickenella  fibula.
+* Top 5 Prediction: With  2.6% probability is a picture of Hygrocybe psittacina.
+</code></pre>
+<figure>
+    <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/hygrocybe_coccinea.jpeg"/> 
+</figure>
+
+<pre><code>* Top 1 Prediction: With 37.3% probability is a picture of Hygrocybe coccinea.
+* Top 2 Prediction: With 22.3% probability is a picture of Hygrocybe punicea.
+* Top 3 Prediction: With  9.2% probability is a picture of Hygrocybe miniata.
+* Top 4 Prediction: With  5.4% probability is a picture of Hygrocybe laeta.
+* Top 5 Prediction: With  4.1% probability is a picture of Hygrocybe conica.
+</code></pre>
+<figure>
+    <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/Coprinopsis_cineirea_cropped.jpeg"/> 
+</figure>
+
+<pre><code>* Top 1 Prediction: With 25.9% probability is a picture of Coprinopsis cinerea.
+* Top 2 Prediction: With 22.1% probability is a picture of Coprinus lagopus.
+* Top 3 Prediction: With 11.1% probability is a picture of Coprinus niveus.
+* Top 4 Prediction: With 10.8% probability is a picture of Coprinopsis ephemeroides.
+* Top 5 Prediction: With  6.8% probability is a picture of Coprinopsis radiata.
+</code></pre>
+<p>After the model&rsquo;s evaluation it will be interesting to see what mushrooms are missclassified. This information can be critical for the use case of this algorithm, since we want to make sure that poisonous species are not misclassified as edible ones. To reduce that type of missclassification it would be recommended to increase the amount of pictures for those species.</p>
+<p>Another option to improve model accuracy for poisonous mushrooms would be to penalize false negatives for those particular species by increasing the weight for those classes. For this we can use <a href="https://www.tensorflow.org/api_docs/python/tf/nn/weighted_cross_entropy_with_logits">tf.nn.weighted_cross_entropy_with_logits</a>.</p>
+<ul>
+<li><code>pos_weight</code> &gt; 1 will <strong>decrease the false negative count</strong>, hence increasing the <strong>recall</strong>.</li>
+<li>Conversely setting <code>pos_weight</code> &lt; 1 decreases the false positive count and increases the <strong>precision</strong>.</li>
 </ul>
 <ul class="pa0">
   

@@ -37,7 +37,7 @@
 <meta itemprop="description" content="The goal in this project is to train a CNN to classify pictures of mushrooms from around 1000 different species">
 <meta itemprop="datePublished" content="2021-02-14T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-02-14T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1255">
+<meta itemprop="wordCount" content="1241">
 
 
 
@@ -331,7 +331,7 @@
 * Top 5 Prediction: With  1.0% probability is a picture of Lactarius sanguifluus.
 </code></pre>
 <p>Next, I increased the number of mushroom species adn I trained the Xception model again using a <strong>larger picture size (600x600)</strong>.</p>
-<p><em>Note 1: After adding more mushroom species the accuracy of the model is expected to decrease, in particular, due to the large amount of species within the same mushroom Genus such Agaricus (16 species), Amanita (36 species), Boletus (23), Lactarius (38), Russula (40) since mushrooms with the same genus share many morphological features</em></p>
+<p><em>Note 1: After adding more mushroom species the accuracy of the model is expected to decrease, in particular, due to the large amount of species within the same mushroom Genus such Agaricus (16 species), Amanita (36 species), Boletus (23), Lactarius (38), Russula (40) and Cortinarius (48) since mushrooms with the same genus share many morphological features</em></p>
 <p><em>Note 2: Trainning EfficientNetB7(2020) with Trainable params = 139,297,743, was attempted but I found the training to progress too slowly.</em></p>
 <ul>
 <li><strong>4.4 my Xception model (2016) my 2nd version (v2): Trainable params: 39,502,029. Picture_size=600x600 (Trained on pictures of 933 mushroom species total)</strong></li>
@@ -387,7 +387,6 @@
 <li><code>pos_weight</code> &gt; 1 will <strong>decrease the false negative count</strong>, hence increasing the <strong>recall</strong>.</li>
 <li>Conversely setting <code>pos_weight</code> &lt; 1 decreases the false positive count and increases the <strong>precision</strong>.</li>
 </ul>
-<p>Alternatively, we could increase the amount of pictures of poisonous species to increase the accuracy detecting those.</p>
 <ul class="pa0">
   
 </ul>

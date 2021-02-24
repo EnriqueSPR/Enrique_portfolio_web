@@ -57,10 +57,10 @@ Packages: pandas, numpy, random, os, cv2, pathlib, PIL, sklearn, matplotlib, sea
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://enriquespr.github.io/Enrique_portfolio_web/post/project_5/</guid>
-      <description>Description: An end-to-end project in which I scraped , cleaned, analysed data and trained a model able to accurately predict second hand prices cars in Spain.
+      <description>Description: An end-to-end project in which I scrape , prepare, analyse the data, find a model and create a web app able to accurately predict to predict second hand prices cars in Spain.
 This is a great tool to have if you are looking for a second car or if you want to sell yours. 🚗🚓🚕🚐🚙🚓💨
 Code and Resources Used: Python Version: 3.7
-Packages: pandas, numpy, datetime, re, requests, csv, sklearn, matplotlib, seaborn, plotly, pickle and json.</description>
+Packages: pandas, numpy, datetime, re, requests, csv, sklearn, matplotlib, seaborn, plotly, pickle, flask, jsonify and json.</description>
     </item>
     
     <item>

@@ -37,7 +37,7 @@
 <meta itemprop="description" content="A tool that estimates the price of second hand cars sold in Spain">
 <meta itemprop="datePublished" content="2020-10-25T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-10-25T00:00:00+00:00" />
-<meta itemprop="wordCount" content="815">
+<meta itemprop="wordCount" content="816">
 
 
 
@@ -199,7 +199,7 @@
 <p>This is a great tool to have if you are looking for a second car or if you want to sell yours. 🚗🚓🚕🚐🚙🚓💨</p>
 <h3 id="code-and-resources-used">Code and Resources Used:</h3>
 <p><strong>Python Version</strong>: 3.7</p>
-<p><strong>Packages</strong>: pandas, numpy, datetime, re, requests, csv, sklearn, matplotlib, seaborn, plotly, pickle, flask, jsonify and json.</p>
+<p><strong>Packages</strong>: pandas, numpy, datetime, re, requests, csv, sklearn, matplotlib, seaborn, plotly, pickle, flask, jsonify, json and heroku.</p>
 <p><strong><a href="https://nbviewer.jupyter.org/github/EnriqueSPR/second_hand_cars_project/blob/main/car_price_project.ipynb">See full project code here.</a></strong></p>
 <p><a href="https://github.com/EnriqueSPR/second_hand_cars_project">Link to GitHub Repository</a></p>
 <h3 id="summary-of-the-project">Summary of the project:</h3>
@@ -305,16 +305,13 @@ The area of the circles is proportional to the <strong>number of adds</strong>, 
 <p><strong>horse_power, years_old, km, doors, description_len, gear_bool, seller_bool, fuel_bool, region, and brand</strong>.</p>
 <h2 id="4-data-split-and-data-preprocessing">4. Data Split and Data Preprocessing:</h2>
 <ul>
-<li>Data was splitteed using <strong>StratifiedShuffleSplit</strong> to guarantee an even distribution after splitting the data. Test size chosen was 20%.</li>
-</ul>
-<pre><code><figure>
-    <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_5/stratified_cars.png"/> 
-</figure>
-  
-</code></pre>
-<ul>
-<li><strong>Standarization</strong> was performed using <strong>StandardScaler()</strong> on the train set, and the scaler was then used on the test set (only on the no-dummy variables).
-This helped minimizing the differences of scale among variables, hence resulting in better modeling.</li>
+<li>
+<p>Data was splitteed using <strong>StratifiedShuffleSplit</strong> to guarantee an even distribution after splitting the data. Test size chosen was 20%.</p>
+</li>
+<li>
+<p><strong>Standarization</strong> was performed using <strong>StandardScaler()</strong> on the train set, and the scaler was then used on the test set (only on the no-dummy variables).
+This helped minimizing the differences of scale among variables, hence resulting in better modeling.</p>
+</li>
 </ul>
 <h2 id="5-exploring-model-performance">5. Exploring Model Performance:</h2>
 <ul>
@@ -357,12 +354,12 @@ with a score of <strong>0.93</strong> on both the train and test set.</p>
 <li>The model was saved as a <strong>pickle</strong> file for its use.</li>
 </ul>
 <h2 id="8-productionization">8. Productionization</h2>
-<p>In this step, I built a flask API endpoint that was hosted on a local webserver. The API endpoint takes in a request with the list of car related parameters and returns the estimated selling second hand price. A website that makes use of the model prediction was also created (See the app interface below).</p>
+<p>In this step, I built a <strong>flask API endpoint</strong> that was hosted on a local webserver. The API endpoint takes in a request with the list of car related parameters and returns the estimated selling second hand price. A website that makes use of the model prediction was also created (See the app interface below).</p>
 <figure>
     <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_5/app_interface.png"/> 
 </figure>
 
-<p>The final app was deployed using Heroku. Click <strong><a href="https://car-2nd-hand-price-predictor.herokuapp.com/">here</a></strong> to give it a try.</p>
+<p>The final app was deployed using <strong>Heroku</strong>. Click <strong><a href="https://car-2nd-hand-price-predictor.herokuapp.com/">here</a></strong> to give it a try.</p>
 <ul class="pa0">
   
 </ul>

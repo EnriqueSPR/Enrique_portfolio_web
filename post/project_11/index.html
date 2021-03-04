@@ -6,7 +6,7 @@
     
     <title>Project 11: House Rental Price Predictor | Enrique Alcalde</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Created a tool that estimates rental prices from Madrid houses which can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid.">
+    <meta name="description" content="Created a tool that estimates rental prices from Madrid houses. This can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid.">
     <meta name="generator" content="Hugo 0.76.5" />
     
     
@@ -28,23 +28,23 @@
     
     
     <meta property="og:title" content="Project 11: House Rental Price Predictor" />
-<meta property="og:description" content="Created a tool that estimates rental prices from Madrid houses which can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid." />
+<meta property="og:description" content="Created a tool that estimates rental prices from Madrid houses. This can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://enriquespr.github.io/Enrique_portfolio_web/post/project_11/" />
 <meta property="article:published_time" content="2020-06-11T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-06-11T00:00:00+00:00" />
 <meta itemprop="name" content="Project 11: House Rental Price Predictor">
-<meta itemprop="description" content="Created a tool that estimates rental prices from Madrid houses which can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid.">
+<meta itemprop="description" content="Created a tool that estimates rental prices from Madrid houses. This can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid.">
 <meta itemprop="datePublished" content="2020-06-11T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-06-11T00:00:00+00:00" />
-<meta itemprop="wordCount" content="335">
+<meta itemprop="wordCount" content="356">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Project 11: House Rental Price Predictor"/>
-<meta name="twitter:description" content="Created a tool that estimates rental prices from Madrid houses which can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid."/>
+<meta name="twitter:description" content="Created a tool that estimates rental prices from Madrid houses. This can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid."/>
 
 	
   </head>
@@ -137,7 +137,7 @@
           <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project 11: House Rental Price Predictor</h1>
           
             <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-              Created a tool that estimates rental prices from Madrid houses which can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid.
+              Created a tool that estimates rental prices from Madrid houses. This can aid flat owners as well as people looking for a house to get an idea of the Real State Market in Madrid.
             </h2>
           
         
@@ -291,11 +291,19 @@
 </figure>
 
 <h2 id="5-productionization">5. Productionization</h2>
-<p>In this step, I built a flask API endpoint that was hosted on a local webserver.
-The API endpoint takes in a request with the list of house parameters and returns the estimated price.</p>
-<p>A website that makes use of the model was also created. See a screenshot below:</p>
+<ul>
+<li>In this step, I built a flask API endpoint that was hosted on a local webserver. The API endpoint takes in a request with the list of house parameters and returns the estimated price. A website that makes use of the model prediction was also created.</li>
+</ul>
 <figure>
     <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_11/ScreenshotRentPredictor.png"/> 
+</figure>
+
+<ul>
+<li>Secondly, I built locally an app with the <a href="https://streamlit.io/">Streamlit</a> package and deployed it using the <a href="https://dashboard.heroku.com/apps">Heroku</a> framework.
+Click <strong><a href="https://house-pred-madrid-st.herokuapp.com/">here</a></strong> to give it a try.</li>
+</ul>
+<figure>
+    <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_11/streamlit_app.png"/> 
 </figure>
 
 <ul class="pa0">

@@ -73,9 +73,9 @@ Packages: pandas, numpy, datetime, re, requests, csv, sklearn, matplotlib, seabo
     </item>
     
     <item>
-      <title>Project 6: Predicting Rental Bike Usage</title>
+      <title>Project 7: Predicting Rental Bike Usage</title>
       <link>https://enriquespr.github.io/Enrique_portfolio_web/post/project_7/</link>
-      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://enriquespr.github.io/Enrique_portfolio_web/post/project_7/</guid>
       <description>Description: I will be using a dataset containing information from a bicycle rental company called capital bikeshare located in Washington D.C founded in 2010. The aim is to use the data from the past 10 years (2010-2020) to develop a model that can predict bicycle usage (Number of trips and total time ride usage) at a given day.
@@ -85,9 +85,9 @@ Packages: pandas, numpy, datetime, os, sklearn, matplotlib, seaborn, plotly.</de
     </item>
     
     <item>
-      <title>Project 7: Red Wine Quality Classification</title>
+      <title>Project 8: Red Wine Quality Classification</title>
       <link>https://enriquespr.github.io/Enrique_portfolio_web/post/project_8/</link>
-      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://enriquespr.github.io/Enrique_portfolio_web/post/project_8/</guid>
       <description>Description: In this project we will tackle a multi-classification problem using supervised ML on a well-known dataset containing red wine quality parameters. Find the dataset here. This dataset contains quality parameters for 1596 red-wines, which we can use to build a model that predicts red wine quality. Following analyses of feature distribution and data preprocessing, several classification models were trained and their performance assessed. Three models (SVC, RFC and ETC) were chosed, tuned and ensembled using sorf voting classifier 🍷⭐⭐⭐⭐⭐</description>

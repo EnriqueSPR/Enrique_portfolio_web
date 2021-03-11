@@ -6,7 +6,7 @@
     
     <title>Project 1: Mushroom Recognition Classifier using CNNs | Enrique Alcalde</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The goal in this project is to train a CNN to classify pictures of mushrooms from around 1000 different popular mushroom species">
+    <meta name="description" content="The goal in this project is to train a CNN able to classify pictures of mushrooms from around 1000 different popular mushroom species">
     <meta name="generator" content="Hugo 0.76.5" />
     
     
@@ -28,23 +28,23 @@
     
     
     <meta property="og:title" content="Project 1: Mushroom Recognition Classifier using CNNs" />
-<meta property="og:description" content="The goal in this project is to train a CNN to classify pictures of mushrooms from around 1000 different popular mushroom species" />
+<meta property="og:description" content="The goal in this project is to train a CNN able to classify pictures of mushrooms from around 1000 different popular mushroom species" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://enriquespr.github.io/Enrique_portfolio_web/post/project_1/" />
 <meta property="article:published_time" content="2021-02-14T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-02-14T00:00:00+00:00" />
 <meta itemprop="name" content="Project 1: Mushroom Recognition Classifier using CNNs">
-<meta itemprop="description" content="The goal in this project is to train a CNN to classify pictures of mushrooms from around 1000 different popular mushroom species">
+<meta itemprop="description" content="The goal in this project is to train a CNN able to classify pictures of mushrooms from around 1000 different popular mushroom species">
 <meta itemprop="datePublished" content="2021-02-14T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-02-14T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1318">
+<meta itemprop="wordCount" content="1322">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Project 1: Mushroom Recognition Classifier using CNNs"/>
-<meta name="twitter:description" content="The goal in this project is to train a CNN to classify pictures of mushrooms from around 1000 different popular mushroom species"/>
+<meta name="twitter:description" content="The goal in this project is to train a CNN able to classify pictures of mushrooms from around 1000 different popular mushroom species"/>
 
 	
   </head>
@@ -137,7 +137,7 @@
           <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project 1: Mushroom Recognition Classifier using CNNs</h1>
           
             <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-              The goal in this project is to train a CNN to classify pictures of mushrooms from around 1000 different popular mushroom species
+              The goal in this project is to train a CNN able to classify pictures of mushrooms from around 1000 different popular mushroom species
             </h2>
           
         
@@ -298,8 +298,9 @@
 </figure>
 
 <ul>
-<li><strong>4.2 Xception(2016): Trainable params: 27,946,080. Picture size=299x299 (Trained on pictures of 823 mushroom species total)</strong></li>
+<li><strong>4.2 Xception(2016)</strong>:</li>
 </ul>
+<p>Trainable params: 27,946,080. Picture size=299x299 (Trained on pictures of 823 mushroom species total)</p>
 <figure>
     <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_1/Xception_Training.png"/> 
 </figure>
@@ -332,10 +333,17 @@
 </code></pre>
 <p>Next, I increased the number of mushroom species adn I trained the Xception model again using a <strong>larger picture size (600x600)</strong>.</p>
 <p><em>Note 1: After adding more mushroom species the accuracy of the model is expected to decrease, in particular, due to the large amount of species within the same mushroom Genus such Agaricus (16 species), Amanita (36 species), Boletus (23), Lactarius (38), Russula (40) and Cortinarius (48) since mushrooms with the same genus share many morphological features</em></p>
-<p><em>Note 2: Trainning EfficientNetB7(2020) with Trainable params = 139,297,743, was attempted but I found the training to progress too slowly.</em></p>
+<p><em>Note 2: Trainning EfficientNetB7(2020) with Trainable params = 139,297,743, was attempted but I found the training to be too slow.</em></p>
 <ul>
-<li><strong>4.4 Model Training. Xception model version 2 (Trainable params: 39,502,029) and Inception Resnet V2 (Trainable params: 70,857,725). Picture_size=600x600 (Trained on pictures of 933 mushroom species total)</strong></li>
+<li><strong>4.4 Model Training</strong>.</li>
 </ul>
+<p>Both CNNs were trained on a total of 154.000 pictures (size=600x600) from a total of 933 species:</p>
+<blockquote>
+<ul>
+<li>Xception (Trainable params: 39,502,029)</li>
+<li>Inception Resnet V2 (Trainable params: 70,857,725).</li>
+</ul>
+</blockquote>
 <p>The hyperparameter batch_size is important as it largely affects the generalization and convergence speed of the model. Large batch sizes may cause bad generalization, but will converge faster (<a href="https://towardsdatascience.com/how-to-break-gpu-memory-boundaries-even-with-large-batch-sizes-7a9c27a400ce">See this blog for more info</a>). Here, a batch_size of 12 was chosen, partly due to GPU memory limitations.</p>
 <p>Regarding the optimizer, I employed Adam first and switched to sgd at the end of the training try squeezing the last bit of accuracy. <a href="https://mlfromscratch.com/optimizers-explained/#/">Read more this blog</a> to understand better how to pick the right optimizer.</p>
 <p><strong>Training</strong>:</p>

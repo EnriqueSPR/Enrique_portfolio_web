@@ -37,7 +37,7 @@
 <meta itemprop="description" content="The goal in this project is to train a CNN able to classify pictures of mushrooms from around 1000 different popular mushroom species">
 <meta itemprop="datePublished" content="2021-03-11T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-03-11T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1370">
+<meta itemprop="wordCount" content="1404">
 
 
 
@@ -418,7 +418,14 @@
     <img src="https://enriquespr.github.io/Enrique_portfolio_web/images/Project_2/missclassified_mush.png"/> 
 </figure>
 
-<p>This information can be critical for the use case of this algorithm, since we want to make sure that poisonous species are not misclassified as edible ones. To reduce that type of missclassification it would be recommended to increase the amount of pictures for those species.</p>
+<ul>
+<li>
+<p><strong>4.7 Ideas for improving the model performance</strong>:</p>
+<ul>
+<li>
+<p>To reduce the missclassification of poisonous species it would be recommended to increase the amount of pictures for those species.</p>
+</li>
+<li>
 <p>Another option to improve model accuracy for poisonous mushrooms would be to penalize false negatives for those particular species by increasing the weight for those classes. For this we can use <a href="https://www.tensorflow.org/api_docs/python/tf/nn/weighted_cross_entropy_with_logits">tf.nn.weighted_cross_entropy_with_logits</a>.</p>
 <blockquote>
 <ul>
@@ -426,8 +433,15 @@
 <li>Conversely setting <code>pos_weight</code> &lt; 1 <strong>decreases the false positive count</strong> and increases the <strong>precision</strong>.</li>
 </ul>
 </blockquote>
+</li>
+<li>
+<p>Finally, due to the fasting evolving nature of the computer vision field, it is always recommended to follow the lastest trends: For instance, just recently (March-April 2021) two papers have been published reporting <strong>substantial improvements</strong> of <strong><a href="https://arxiv.org/pdf/2103.07579.pdf">Resnets</a></strong> and <strong><a href="https://arxiv.org/pdf/2104.00298.pdf">EfficientNetV2</a></strong>, in both, <strong>training speed and performance</strong> in the ImageNet dataset.</p>
+</li>
+</ul>
+</li>
+</ul>
 <hr>
-<h2 id="5-productionalize-the-model"><strong>5. Productionalize the Model</strong></h2>
+<h2 id="5-productionalize-the-model-with-streamlit-and-heroku">5 Productionalize the Model with streamlit and heroku</h2>
 <p>I built locally an app with the <a href="https://streamlit.io/">Streamlit</a> package and deployed it using the <a href="https://dashboard.heroku.com/apps">Heroku</a> framework.</p>
 <p>See below couple of screenshots of the app:</p>
 <figure>
